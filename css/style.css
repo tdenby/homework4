@@ -1,0 +1,95 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+header img {
+    width: 100vw;
+    height: auto;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.nav_item {
+    align-self: center;
+}
+
+.card {
+    align-self: center;
+    width: 100%;
+}
+
+img {
+    align-self: center;
+    width: 100%;
+}
+
+@keyframes fadeOut {
+    10% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion) {
+    header img {
+        animation: none;
+    }
+  }
+
+@media (min-width: 700px) {
+    header img {
+        width: 400px;
+        height: auto;
+    }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav_links {
+        flex-direction: row;
+    }
+    .pricing {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width: 300px;
+        height: 475px;
+    }
+    img {
+        width: 300px;
+        height: 235px;
+    }
+}
